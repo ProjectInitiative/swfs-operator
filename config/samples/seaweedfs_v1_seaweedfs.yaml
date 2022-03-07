@@ -1,0 +1,6 @@
+apiVersion: seaweedfs.projecti.org/v1
+kind: Seaweedfs
+metadata:
+  name: seaweedfs-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - seaweedfs.projecti.org
+  resources:
+  - seaweedfs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - seaweedfs.projecti.org
+  resources:
+  - seaweedfs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - seaweedfs.projecti.org
+  resources:
+  - seaweedfs/status
+  verbs:
+  - get
+  - patch
+  - update

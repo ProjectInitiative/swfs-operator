@@ -1,0 +1,24 @@
+# permissions for end users to edit seaweedfs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: seaweedfs-editor-role
+rules:
+- apiGroups:
+  - seaweedfs.projecti.org
+  resources:
+  - seaweedfs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - seaweedfs.projecti.org
+  resources:
+  - seaweedfs/status
+  verbs:
+  - get

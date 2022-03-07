@@ -1,0 +1,19 @@
+domain: projecti.org
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: swfs-operator
+repo: github.com/projectinitative/swfs-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: projecti.org
+  group: seaweedfs
+  kind: Seaweedfs
+  path: github.com/projectinitative/swfs-operator/api/v1
+  version: v1
+version: "3"

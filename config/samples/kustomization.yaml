@@ -1,0 +1,4 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- seaweedfs_v1_seaweedfs.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

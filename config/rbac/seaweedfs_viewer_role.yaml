@@ -1,0 +1,20 @@
+# permissions for end users to view seaweedfs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: seaweedfs-viewer-role
+rules:
+- apiGroups:
+  - seaweedfs.projecti.org
+  resources:
+  - seaweedfs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - seaweedfs.projecti.org
+  resources:
+  - seaweedfs/status
+  verbs:
+  - get
